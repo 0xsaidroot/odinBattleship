@@ -10,9 +10,12 @@ export class Ship {
   hit() {
     this.#hits++;
   }
-  isSunk(){
-    if(this.#length - this.#hits === 0) this.#sunk = true;
+  isSunk() {
+    if (this.#length - this.#hits === 0) this.#sunk = true;
     return this.#sunk;
+  }
+  shipLength() {
+    return this.#length;
   }
   nOfHits() {
     return this.#hits;

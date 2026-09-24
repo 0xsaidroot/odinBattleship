@@ -11,7 +11,8 @@ describe('The Ship function test', () => {
       expect(ship.isSunk()).toBeFalsy();
     }),
     test('hits() should be true when hits equal length', () => {
-        ship.hit(); ship.hit();
+      ship.hit();
+      ship.hit();
       expect(ship.isSunk()).toBeTruthy();
     }));
 });
