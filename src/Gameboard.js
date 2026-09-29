@@ -6,12 +6,40 @@ export class Gameboard {
   }
   placeShipY(coord, length) {
     let ship = new Ship(length);
-    for (let i = coord[0]; i <= coord[0] + length; i++) {
-      if (this.board[i][coord[1]] !== 0 || ) return;
-      this.board[i][coord[1]] = 1;
+    let row = coord[0];
+    let column = coord[1];
+
+    for (let i = row; i <= row + length - 1; i++) {
+      if (
+        this.board[i][column] !== 0 ||
+        row < 0 ||
+        column < 0 ||
+        column > 9 ||
+        row + length > 9
+      ) return;
+      this.board[i][column] = 1;
     }
-    return this.board;
+  }
+  placeShipX(coord, length) {
+    let ship = new Ship(length);
+    let row = coord[0];
+    let column = coord[1];
+
+    for (let i = column; i <= column + length - 1; i++) {
+      if (
+        this.board[row][i] !== 0 ||
+        row < 0 ||
+        column < 0 ||
+        column  + length > 9 ||
+        row > 9
+      ) return;
+      this.board[row][i] = 1;
+    }
+  }
+  receiveAttack(){
+    
   }
 }
 
 const game = new Gameboard();
+
