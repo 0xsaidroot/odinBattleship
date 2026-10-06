@@ -3,3 +3,48 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20% 1fr;
+}
+.top {
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+.top .menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  gap: 75px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.bottom .left,
+.bottom .right {
+  display: grid;
+  grid-template-rows: 10% 1fr;
+}
+.boardOne,
+.boardTwo {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  border: 1px solid black;
+  padding: 2px;
+  background-color: lightyellow; 
+
+}
+.gridCell {
+   border: 1px solid black; 
+}
+.gridCell,.gridLabel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
